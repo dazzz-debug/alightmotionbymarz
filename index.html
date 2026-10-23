@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Aktivasi</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/config.js"></script>
+<script defer src="js/access.js"></script>
+<script defer src="js/app.js"></script>
+</head>
+<body>
+<div id="access-screen" class="access-screen">
+  <div class="main-panel access-panel">
+    <div class="header-panel">
+      <div class="header-title"><span class="alert-icon">◆</span> MARZ ACCESS</div>
+      <div class="api-badge">LOCKED</div>
+    </div>
+    <div class="free-badge">KEY REQUIRED</div>
+    <h2 class="access-title">Masukkan Akses Key</h2>
+    <p class="access-desc">Masukkan key untuk membuka Panel Aktivasi.</p>
+    <div class="input-wrapper">
+      <span class="input-symbol">⌑</span>
+      <input id="access-key" type="password" placeholder="Masukkan akses key" autocomplete="off">
+    </div>
+    <button class="btn" id="access-submit">BUKA PANEL</button>
+    <div id="access-error" class="notif error-notif" role="alert"></div>
+    <div class="footer"><div>ACCESS CONTROL</div><div>copyright by <span>MARZ</span> ✔</div></div>
+  </div>
+</div>
+
+<div class="main-panel" id="main-panel" style="display:none">
+  <div class="header-panel">
+    <div class="header-title">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+      Panel Aktivasi
+    </div>
+    <div class="api-badge">API Key Ada</div>
+  </div>
+  <div class="free-badge">FREE</div>
+  <img src="assets/horror.svg" class="horror-img" alt="Horror" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=1000&auto=format&fit=crop'">
+  <button class="btn-guide" id="guide-toggle">📖 Cara Menggunakan</button>
+  <div id="guide-text" class="guide-text" hidden>
+    1. Masukkan email target.<br>
+    2. Klik Kirim Link.<br>
+    3. Cek email dan salin link yang diterima.<br>
+    4. Tempel link di tab verifikasi.<br>
+    5. Klik Verifikasi.
+  </div>
+  <div class="steps">
+    <div class="step-item active" id="ind-1"><div class="step-dot"></div>Kirim Link</div>
+    <div class="step-item" id="ind-2"><div class="step-dot"></div>Verifikasi</div>
+  </div>
+  <div id="step-1" class="step-content active">
+    <div class="step-title"><span class="step-svg">➤</span>Kirim Link Aktivasi</div>
+    <div class="input-wrapper">
+      <span class="input-symbol">✉</span>
+      <input type="email" id="email-input" placeholder="email@contoh.com" autocomplete="email">
+    </div>
+    <button class="btn" id="btn-send">➤ &nbsp; Kirim Link</button>
+    <div class="spinner" id="spin-1"></div>
+  </div>
+  <div id="step-2" class="step-content">
+    <div class="step-title verify-title"><span class="step-svg">✓</span>Verifikasi Link</div>
+    <div class="input-wrapper">
+      <span class="input-symbol">↗</span>
+      <input type="text" id="link-input" placeholder="Paste Link Verifikasi..." autocomplete="off">
+    </div>
+    <button class="btn" id="btn-verify">✓ &nbsp; Verifikasi Sekarang</button>
+    <div class="spinner" id="spin-2"></div>
+  </div>
+  <div class="cancel-btn" id="cancel-btn" hidden>↺ Batalkan proses / ganti email</div>
+  <div id="notif" class="notif" role="status" aria-live="polite"></div>
+  <button class="lock-btn" id="lock-btn">Kunci Panel</button>
+  <div class="footer"><div>ENCRYPTED • SECURE</div><div>copyright by <span>MARZ</span> ✔</div><div>👁️ Panel Aktivasi</div></div>
+</div>
+</body>
+</html>

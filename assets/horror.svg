@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#090000"/><stop offset="1" stop-color="#4a0000"/></linearGradient></defs>
+<rect width="1000" height="500" fill="url(#g)"/><circle cx="500" cy="250" r="145" fill="#100000" stroke="#ff003c" stroke-width="5"/><path d="M420 185 L465 235 L445 290 L500 270 L555 290 L535 235 L580 185 L520 205 L500 150 L480 205 Z" fill="#ff003c" opacity=".85"/><text x="500" y="430" font-family="monospace" font-size="42" text-anchor="middle" fill="#ffb3b3">MARZ PANEL</text>
+</svg>
